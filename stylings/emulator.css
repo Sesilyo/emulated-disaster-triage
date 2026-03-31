@@ -1,0 +1,35 @@
+/* GENERAL PAGE RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+#panel-container {
+    background-color: gainsboro;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    gap: 30px;
+}
+
+.panel-emulation {
+    background-color: aliceblue;
+
+    border: 2px solid black;
+    padding: 30px;
+
+    min-width: 250px;
+    max-width: 300px;
+
+    min-height: 500px;
+    max-height: 600px;
+
+    display: flex;
+    flex-direction: column;
+}
