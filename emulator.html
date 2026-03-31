@@ -16,6 +16,20 @@
                 <!-- PANEL FOR SENDER -->
                 <div id="sender-panel" class="panel-emulation">
                     <h2>Sender Panel</h2>
+                    <div>
+                        <input type="text" id="house_id" name="house_id" placeholder="Enter House ID" required>
+                        <button type="submit" onclick="sendID()">Submit</button>
+                    </div>
+                        
+                    <button type="button" onclick="status('SAFE')">SAFE</button>
+                    <button type="button" onclick="status('EVACUATED')">EVACUATED</button>
+                    <button type="button" onclick="status('IMMEDIATE HELP')">IMMEDIATE HELP</button>
+
+                    <div id="sent-log">
+                        <h3>Sent Log</h3>
+                        <ul id="entry-list"></ul>
+                    </div>
+
                 </div>
 
 
