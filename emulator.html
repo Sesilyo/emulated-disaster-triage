@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <link rel="stylesheet" href="/emulated-disaster-triage/stylings/emulator.css">
+        <link rel="stylesheet" href="stylings/emulator.css">
         
         <title>EMULATOR PAGE</title>
     </head>
@@ -16,20 +16,23 @@
                 <!-- PANEL FOR SENDER -->
                 <div id="sender-panel" class="panel-emulation">
                     <h2>Sender Panel</h2>
+                    
+                    <!-- HOUSE ID SUBMISSION -->
                     <div>
                         <input type="text" id="house_id" name="house_id" placeholder="Enter House ID" required>
                         <button type="submit" onclick="sendID()">Submit</button>
                     </div>
                         
+                    <!-- PANEL FOR SENDER -->
                     <button type="button" onclick="status('SAFE')">SAFE</button>
                     <button type="button" onclick="status('EVACUATED')">EVACUATED</button>
                     <button type="button" onclick="status('IMMEDIATE HELP')">IMMEDIATE HELP</button>
 
+                    <!-- LOCAL SENT LOG -->
                     <div id="sent-log">
                         <h3>Sent Log</h3>
                         <ul id="entry-list"></ul>
                     </div>
-
                 </div>
 
 
