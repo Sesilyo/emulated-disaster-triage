@@ -1,11 +1,14 @@
 :root {
     /* COLORS */
     /* SAFE */
-    --color-safe-main:   #5CE65C;
-    --color-safe-border: #1c9839;
+    --color-safe-main:   #089949;
+    --color-safe-border: #046b33;
 
     /* EVACUATED */
+    --color-evacuated-main:   #ffb303;
+    --color-evacuated-border: #f3ab01;
     
     /* IMMEDIATE */
-    
+    --color-immediate-main:   #ff4837;
+    --color-immediate-border: #d82e1d;
 }
