@@ -1,0 +1,48 @@
+time-stamp: 10:59 PM
+
+    Yona and I did:
+    - rough HTML structure for the sender and receiver panels
+    - styled it roughly too
+
+
+    Missing implementation yet:
+    - JS logic (back-end)
+
+
+    Propmpt for an AI if u guys need an AI help to catch u up with ze code:
+    <PROMPT START HERE>
+        current tree structure:
+            C:.
+            ├───emulated-disaster-triage
+            │   │   emulator.html
+            │   │   index.html
+            │   │
+            │   ├───scripts
+            │   │       for-the-team.md
+            │   │
+            │   └───stylings
+            │           emulator.css
+            │           for-the-team.md
+            │           typography.css
+            │           variable.css
+            │
+            └───for-the-team-messages
+                    status-update-1.txt
+
+            Hello, AI. Some constant color variables were utilized. Planning to make typography constant as well.
+            The index.html is still empty but ignore it for now, it will be an entryway or will serve as an introduction screen for future presentations.
+            There are no JS logic for now.
+            The contents of the file emulator.css is intended to follow the format that stylings will be grouped with other stylings that shares responsibility.
+            Boxing elements inside divs were used... refer how emulator.html was structured.
+            That is all.
+        <PROMPT ENDS HERE>
+
+        Code well, guys!!!
+
+        Just DM me sa Messe or DC if u have questions.
+    - Seth 
+
+    p.s if possible... add comments to your code and add a status-update-2.txt hehe
+    p.s-2 also, if AI was used, please document or take not for AI disclosure formalization
+
+time-stamp: 11:11 PM
