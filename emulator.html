@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <link rel="stylesheet" href="/stylings/emulator.css">
+        <link rel="stylesheet" href="/emulated-disaster-triage/stylings/emulator.css">
         
         <title>EMULATOR PAGE</title>
     </head>
@@ -22,6 +22,40 @@
                 <!-- PANEL FOR RECEIVER -->
                 <div id="receiver-panel" class="panel-emulation">
                     <h2>Receiver Panel</h2>
+                    
+                    <!-- UPDATES FROM SENDER PANEL DISPLAYS HERE -->
+                    <div id="receiver-screen">
+                        
+                        <!-- BROADCAST UPDATE DISPLAYS HERE -->
+                        <div id="updates-div">
+                            <!-- initial hardcoded updates-->
+                            <!-- if u guys wanna tackle the JS of updates later go lang -->
+                            <p>Update 1</p>
+                            <p>Update 2</p>
+                            <p>Update 3</p>
+                            <p>Update 4</p>
+                            <p>Update 5</p>
+                        </div>
+
+                        <!-- TRIAGE COUNTER DISPLAYS HERE -->
+                        <div id="counter-div">
+                            <div id="safe-counter" class="counter-elements">
+                                <p>SAFE: </p>
+                                <output id="safe-output">0</output>
+                            </div>
+
+                            <div id="safe-counter" class="counter-elements">
+                                <p>EVACUATED: </p>
+                                <output id="evacuated-output">0</output>
+                            </div>
+
+                            <div id="safe-counter" class="counter-elements">
+                                <p>IMMEDIATE HELP: </p>
+                                <output id="immediate-help-output">0</output>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
