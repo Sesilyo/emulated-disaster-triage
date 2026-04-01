@@ -37,6 +37,106 @@
     flex-direction: column;
 }
 
+/* SENDER PANEL */
+#sender-panel {
+    display: flex;
+    flex-direction: column;
+}
+
+#sender-screen {
+    flex: 1;
+
+    border: 2px solid black;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    padding: 5px;
+
+    min-height: 100%;
+}
+
+#upper-screen {
+   border: 1px solid grey;
+    padding: 5px;
+}
+
+#submission-div {
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#submission-div button {
+    width: 60px;
+}
+
+#buttons-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#buttons-div button{
+    width: 150px;
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-style: groove;
+    border-radius: 3px;
+}
+
+#buttons-div button:nth-child(1){
+    background-color: var(--color-safe-main);
+    border-color: var(--color-safe-border);
+    color:  white;
+}
+
+#buttons-div button:nth-child(2){
+    background-color: var(--color-evacuated-main);
+    border-color: var(--color-evacuated-border);
+    color:  black;
+}
+
+#buttons-div button:nth-child(3){
+    background-color: var(--color-immediate-main);
+    border-color: var(--color-immediate-border);
+    color:  white;
+}
+
+#lower-screen {
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    gap:5px;
+}
+
+#sent-log {
+    border: 1px solid grey;
+    padding: 5px;
+}
+
+#scrollable {
+    height:105px;
+    max-width: 100%;
+    overflow-y: auto;
+    padding: 3px;
+    border: 1px solid grey;
+    padding: 5px;
+}
+
+#entry-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column-reverse;
+}
 
 /* RECEIVER PANEL */
 #receiver-panel {

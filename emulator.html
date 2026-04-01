@@ -17,21 +17,39 @@
                 <div id="sender-panel" class="panel-emulation">
                     <h2>Sender Panel</h2>
                     
-                    <!-- HOUSE ID SUBMISSION -->
-                    <div>
-                        <input type="text" id="house_id" name="house_id" placeholder="Enter House ID" required>
-                        <button type="submit" onclick="sendID()">Submit</button>
-                    </div>
-                        
-                    <!-- PANEL FOR SENDER -->
-                    <button type="button" onclick="status('SAFE')">SAFE</button>
-                    <button type="button" onclick="status('EVACUATED')">EVACUATED</button>
-                    <button type="button" onclick="status('IMMEDIATE HELP')">IMMEDIATE HELP</button>
-
-                    <!-- LOCAL SENT LOG -->
-                    <div id="sent-log">
-                        <h3>Sent Log</h3>
-                        <ul id="entry-list"></ul>
+                    <div id="sender-screen">
+                        <div id="upper-screen">
+                            <!-- HOUSE ID SUBMISSION -->
+                            <div id="submission-div">
+                                <input type="text" id="house_id" name="house_id" placeholder="Enter House ID" required>
+                                <button type="button" onclick="sendID()">Submit</button>
+                            </div>
+                                
+                            <!-- STATUS BUTTONS -->
+                            <div id="buttons-div">
+                                <button type="button" onclick="status('SAFE')">SAFE</button>
+                                <button type="button" onclick="status('EVACUATED')">EVACUATED</button>
+                                <button type="button" onclick="status('IMMEDIATE HELP')">IMMEDIATE HELP</button>
+                            </div>
+                        </div>
+                        <div id="lower-screen">
+                            <!-- LOCAL SENT LOG -->
+                            <div id="sent-log">
+                                <h3>Sent Log</h3>
+                            </div>
+                            <div id="scrollable">
+                                    <ul id="entry-list">
+                                        <li>Entry 1</li>
+                                        <li>Entry 2</li>
+                                        <li>Entry 3</li>
+                                        <li>Entry 4</li>
+                                        <li>Entry 5</li>
+                                        <li>Entry 6</li>
+                                        <li>Entry 7</li>
+                                        <li>Entry 8</li>
+                                    </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
