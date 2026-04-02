@@ -166,6 +166,10 @@
     padding: 5px;
 }
 
+#updates-list li {
+    margin-bottom: 10px;
+}
+
 #counter-div {
     flex: 1;
 
