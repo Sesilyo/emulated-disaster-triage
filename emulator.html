@@ -11,6 +11,7 @@
     <body>
         <div id="emulation-container">
             <h1 id="emulation-title">EMULATION PAGE</h1>
+            
             <div id="panel-container">
 
                 <!-- PANEL FOR SENDER -->
@@ -20,11 +21,7 @@
                     <div id="sender-screen">
                         <div id="upper-screen">
                             <!-- HOUSE ID SUBMISSION -->
-                            <div id="submission-div">
-                                <input type="text" id="house_id" name="house_id" placeholder="Enter House ID" required>
-                                <button type="button" onclick="sendID()">Submit</button>
-                            </div>
-                                
+                            
                             <!-- STATUS BUTTONS -->
                             <div id="buttons-div">
                                 <button type="button" onclick="status('SAFE')">SAFE</button>
@@ -38,22 +35,30 @@
                                 <h3>Sent Log</h3>
                             </div>
                             <div id="scrollable">
-                                    <ul id="entry-list">
-                                        <li>Entry 1</li>
-                                        <li>Entry 2</li>
-                                        <li>Entry 3</li>
-                                        <li>Entry 4</li>
-                                        <li>Entry 5</li>
-                                        <li>Entry 6</li>
-                                        <li>Entry 7</li>
-                                        <li>Entry 8</li>
+                                <ul id="entry-list">
+                                    <li>Entry 1</li>
+                                    <li>Entry 2</li>
+                                    <li>Entry 3</li>
+                                    <li>Entry 4</li>
+                                    <li>Entry 5</li>
+                                    <li>Entry 6</li>
+                                    <li>Entry 7</li>
+                                    <li>[TIME] - [] - TO CID</li>
                                     </ul>
                             </div>
                         </div>
                     </div>
+
+                    <!-- selection of HOUSE ID constants for emulation purposes -->
+                    <div id="house-id-div">
+                        <select id="house-id-dropdown">
+                            <option value="">Select an option</option>
+                        </select>
+                    </div>
+                
                 </div>
-
-
+                
+                
                 <!-- PANEL FOR RECEIVER -->
                 <div id="receiver-panel" class="panel-emulation">
                     <h2>Receiver Panel</h2>
@@ -65,15 +70,21 @@
                         <div id="updates-div">
                             <!-- initial hardcoded updates-->
                             <!-- if u guys wanna tackle the JS of updates later go lang -->
-                            <p>Update 1</p>
+                            <p>6:08 AM - [HOUSE ID] - []</p>
                             <p>Update 2</p>
                             <p>Update 3</p>
                             <p>Update 4</p>
                             <p>Update 5</p>
                         </div>
-
+                        
                         <!-- TRIAGE COUNTER DISPLAYS HERE -->
                         <div id="counter-div">
+                            
+                            <div id="unknown-counter" class="counter-elements">
+                                <p>UNKNOWN: </p>
+                                <output id="unknown-output">0</output>
+                            </div>
+
                             <div id="safe-counter" class="counter-elements">
                                 <p>SAFE: </p>
                                 <output id="safe-output">0</output>
@@ -94,5 +105,10 @@
                 </div>
             </div>
         </div>
+
+        <!-- SCRIPTS -->
+        <script src="./scripts/send-log.js"></script>
+        
+
     </body>
 </html>
