@@ -3,10 +3,10 @@
     
 // hardcoded data for now, can be updated to fetch from backend when it exists
 const logData = [
-    { date: '02/01/25', time: '2:40 PM',  houseID: '#00001', status: 'unknown'   },
+    { date: '02/03/25', time: '2:40 PM',  houseID: '#00001', status: 'unknown'   },
     { date: '',         time: '12:00 PM', houseID: '#00002', status: 'immediate' },
     { date: '',         time: '11:25 AM', houseID: '#00002', status: 'safe'      },
-    { date: '02/02/25', time: '11:25 AM', houseID: '#00003', status: 'safe'      },
+    { date: '02/02/25', time: '3:25 PM', houseID: '#00003', status: 'safe'      },
     { date: '',         time: '2:40 PM',  houseID: '#00001', status: 'unknown'   },
     { date: '',         time: '12:00 PM', houseID: '#00002', status: 'immediate' },
     { date: '',         time: '11:25 AM', houseID: '#00002', status: 'evacuated' },
@@ -25,7 +25,7 @@ function buildUpdateLogTable() {
             <td>${entry.houseID}</td>
             <td><span class="status-dot ${entry.status}"></span></td>
             <td>${entry.status === 'immediate'
-                ? `<button type="button">DISPATCH</button>`
+                ? `<button type="button" id="dispatch-btn">DISPATCH</button>`
                 : ''
             }</td>
         `;
