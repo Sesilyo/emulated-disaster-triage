@@ -5,7 +5,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
 }
 
 #panel-container {
@@ -164,6 +164,10 @@
     border: 1px solid grey;
 
     padding: 5px;
+
+    /*AI help to make panel scrollable*/
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 #updates-div h3 {
@@ -233,9 +237,56 @@
     width: 100%;
 }
 
-.counter-label.dispatched { background-color: #3a7bd5; }
+.counter-label.dispatched { 
+    background-color: #3a7bd5; 
+    width: fit-content;
+}
 
 #dispatched-row output {
     font-size: 12px;
     font-weight: bold;
+}
+
+#dispatch-btn {
+    padding: 2px;
+    font-size: 7px;
+    background-color: #267eb2;
+    border-color: #267eb2;
+    box-shadow: black;
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+/*AI fixed borders*/
+#log-table {
+    width: 100%;
+    table-layout: fixed;
+    word-wrap: break-word;
+    border-collapse: collapse;
+}
+
+.log-head th {
+    padding: 6px 2px;
+    background-color: #c6e7ff;
+    font-size: 10px;
+    text-align: center;
+    border-color: #c6e7ff;
+    border-collapse: collapse;
+    border: none !important;
+}
+
+#log-body {
+    font-size: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+
+#log-body td {
+    padding: 6px 2px;
+    border-bottom: 1px solid #ccc;
+    border-left: none;
+    border-right: none;
 }
