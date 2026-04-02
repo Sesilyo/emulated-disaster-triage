@@ -166,19 +166,72 @@
     padding: 5px;
 }
 
-#counter-div {
-    flex: 1;
-
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-
-    border: 1px solid grey;
-
-    padding: 5px;
+#updates-div h3 {
+    text-align: center;
 }
 
-.counter-elements {
+#counter-div {
+    border: 1px solid grey;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+#counter-div h4 {
+    font-size: 16px;
+}
+
+#counter-row {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+}
+
+.counter-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    flex: 1;
+}
+
+.counter-item output {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.counter-label {
+    border-radius: 20px;
+    padding: 2px 6px;
+    font-size: 8px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.counter-label.unknown   { background-color: #4a4a4a; }
+.counter-label.urgent    { background-color: #c0392b; }
+.counter-label.evacuated { background-color: #d4a800; color: #1a1a1a; }
+.counter-label.safe      { background-color: #27ae60; }
+
+#dispatched-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    border-top: 1px solid #ddd;
+    padding-top: 6px;
+    width: 100%;
+}
+
+.counter-label.dispatched { background-color: #3a7bd5; }
+
+#dispatched-row output {
+    font-size: 12px;
+    font-weight: bold;
 }
