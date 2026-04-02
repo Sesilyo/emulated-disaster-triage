@@ -20,31 +20,43 @@
                     
                     <div id="sender-screen">
                         <div id="upper-screen">
+                            <h3 id="app-name">kalApp</h3>
+
                             <!-- HOUSE ID SUBMISSION -->
                             
                             <!-- STATUS BUTTONS -->
                             <div id="buttons-div">
-                                <button type="button" onclick="status('SAFE')">SAFE</button>
-                                <button type="button" onclick="status('EVACUATED')">EVACUATED</button>
-                                <button type="button" onclick="status('IMMEDIATE HELP')">IMMEDIATE HELP</button>
+                                <button type="button" onclick="status('URGENT')">
+                                    <img src="images/warning_icon.png">
+                                    URGENT
+                                </button>
+                                <button type="button" onclick="status('EVACUATED')">
+                                    <img src="images/exit_icon.png">
+                                    EVACUATED
+                                </button>
+                                <button type="button" onclick="status('SAFE')">
+                                    <img src="images/safe_icon.png">
+                                    SAFE
+                                </button>
                             </div>
                         </div>
+
                         <div id="lower-screen">
                             <!-- LOCAL SENT LOG -->
-                            <div id="sent-log">
-                                <h3>Sent Log</h3>
-                            </div>
+
                             <div id="scrollable">
-                                <ul id="entry-list">
-                                    <li>Entry 1</li>
-                                    <li>Entry 2</li>
-                                    <li>Entry 3</li>
-                                    <li>Entry 4</li>
-                                    <li>Entry 5</li>
-                                    <li>Entry 6</li>
-                                    <li>Entry 7</li>
-                                    <li>[TIME] - [] - TO CID</li>
-                                    </ul>
+                                <table id="entry-table">
+                                    <thead class="entry-head">
+                                        <tr>
+                                            <th>Time</th>
+                                            <th>Status</th>
+                                            <th>User</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="entry-body">
+                                        <!-- populated by scripts/send-log.js -->
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>

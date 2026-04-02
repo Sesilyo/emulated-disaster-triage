@@ -1,7 +1,7 @@
 @import "./variable.css";
 @import "./typography.css";
 
-/* GENERAL PAGE RESET */
+/* ======== GENERAL PAGE RESET ======== */
 * {
     margin: 0;
     padding: 0;
@@ -37,7 +37,7 @@
     flex-direction: column;
 }
 
-/* SENDER PANEL */
+/* ======== SENDER PANEL ======== */
 #sender-panel {
     display: flex;
     flex-direction: column;
@@ -62,6 +62,12 @@
     padding: 5px;
 }
 
+#app-name {
+    margin-top: 6px;
+    text-align: center;
+    font-size: 30px;
+}
+
 #house-id-div {
     display: flex;
     align-items: center;
@@ -78,6 +84,7 @@
     flex: 1;
     margin-top: 40px;
     margin-bottom: 40px;
+    padding: 8px 12px;
 }
 
 #buttons-div button{
@@ -86,14 +93,19 @@
     margin-top: 5px;
     margin-bottom: 5px;
     border-style: groove;
-    border-radius: 3px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 0px #1b1b1b;
+    transform: translateY(4px);
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
 }
 
 #buttons-div button:nth-child(1){
-    background-color: var(--color-safe-main);
-    border-color: var(--color-safe-border);
+    background-color: var(--color-immediate-main);
+    border-color: var(--color-immediate-border);
     color:  white;
-}
+    }
 
 #buttons-div button:nth-child(2){
     background-color: var(--color-evacuated-main);
@@ -102,9 +114,15 @@
 }
 
 #buttons-div button:nth-child(3){
-    background-color: var(--color-immediate-main);
-    border-color: var(--color-immediate-border);
+    background-color: var(--color-safe-main);
+    border-color: var(--color-safe-border);
     color:  white;
+}
+
+/*AI code in this block*/
+#buttons-div button img {
+    width: 20px;  
+    height: 20px;
 }
 
 #lower-screen {
@@ -134,7 +152,14 @@
     flex-direction: column-reverse;
 }
 
-/* RECEIVER PANEL */
+#entry-table{
+    width: 100%;
+    table-layout: fixed;
+    word-wrap: break-word;
+    border-collapse: collapse;
+}
+
+/* ======== RECEIVER PANEL ======== */
 #receiver-panel {
     display: flex;
     flex-direction: column;
@@ -257,7 +282,6 @@
     color: white;
     font-weight: bold;
     cursor: pointer;
-
 }
 
 /*AI fixed borders*/
@@ -289,4 +313,8 @@
     border-bottom: 1px solid #ccc;
     border-left: none;
     border-right: none;
+}
+
+#updates-list {
+    font-size: 12px;
 }
