@@ -69,6 +69,22 @@
                         <!-- BROADCAST UPDATE DISPLAYS HERE -->
                         <div id="updates-div">
                             <!-- initial hardcoded updates-->
+                            <!-- created table to link temp hardcoded data in JS for now -->
+                            <h3>Update Log</h3>
+                            <table id="log-table">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                        <th>House ID</th>
+                                        <th>Status</th>
+                                        <th>Respond</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="log-body">
+                                    <!-- populated by scripts/receive-log.js -->
+                                </tbody>
+                            </table>
                             <!-- if u guys wanna tackle the JS of updates later go lang -->
                             <div id="scrollable">
                                <ul id="updates-list"></ul> 
@@ -78,36 +94,39 @@
                         
                         <!-- TRIAGE COUNTER DISPLAYS HERE -->
                         <div id="counter-div">
-                            
-                            <div id="unknown-counter" class="counter-elements">
-                                <p>UNKNOWN: </p>
-                                <output id="unknown-output">0</output>
-                            </div>
+                            <h4>Status Counter</h4>
 
-                            <div id="safe-counter" class="counter-elements">
-                                <p>SAFE: </p>
-                                <output id="safe-output">0</output>
+                            <div id="counter-row">
+                                <div class="counter-item">
+                                    <span class="counter-label unknown">UNKNOWN</span>
+                                    <output id="unknown-output">100,000</output>
+                                </div>
+                                <div class="counter-item">
+                                    <span class="counter-label urgent">URGENT</span>
+                                    <output id="urgent-output">67</output>
+                                </div>
+                                <div class="counter-item">
+                                    <span class="counter-label evacuated">EVACUATED</span>
+                                    <output id="evacuated-output">68</output>
+                                </div>
+                                <div class="counter-item">
+                                    <span class="counter-label safe">SAFE</span>
+                                    <output id="safe-output">69</output>
+                                </div>
+                                </div>
+                                <div id="dispatched-row">
+                                    <span class="counter-label dispatched">DISPATCHED</span>
+                                    <output id="dispatched-output">0</output>
+                                </div>
                             </div>
-
-                            <div id="safe-counter" class="counter-elements">
-                                <p>EVACUATED: </p>
-                                <output id="evacuated-output">0</output>
-                            </div>
-
-                            <div id="safe-counter" class="counter-elements">
-                                <p>IMMEDIATE HELP: </p>
-                                <output id="immediate-help-output">0</output>
-                            </div>
-
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
         <!-- SCRIPTS -->
         <script src="./scripts/send-log.js"></script>
-        
+        <script src="./scripts/receive-log.js"></script>
 
     </body>
 </html>
