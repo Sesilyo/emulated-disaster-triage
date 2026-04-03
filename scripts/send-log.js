@@ -2,9 +2,14 @@
 
 const houseIDDropdown = document.getElementById('house-id-dropdown');
 
+const entryBody = document.getElementById('entry-body');
 // store all status entries
 const entries = [];
 
+const houseLogs = {
+    ID1: [],
+    ID2: []
+};
 // senders info
 const senders = {
     ID1: {
@@ -49,6 +54,7 @@ function status(statusValue) {
         : `${sender.latitude},${sender.longitude}`;
 
     const timestamp = new Date().toLocaleString();
+    const justTime = new Date().toLocaleTimeString();
 
     // message format
     const message =
@@ -66,6 +72,26 @@ function status(statusValue) {
 
     // save to entries array
     entries.push(messageObj)
+
+    //save to house logs array
+    houseLogs[selectedHouseID].push(messageObj);
+   
+    //display
+    // clear table
+    entryBody.innerHTML = "";
+
+    // show only selected house logs
+    houseLogs[selectedHouseID].reverse().forEach(entry => {
+        const row = document.createElement("tr");
+
+        row.innerHTML = `
+            <td>${justTime}</td>
+            <td>${entry.status}</td>
+            <td>${entry.sender_name}</td>
+        `;
+
+        entryBody.appendChild(row);
+    });
 
     // display in receiver panel
     const list = document.getElementById("updates-list");
