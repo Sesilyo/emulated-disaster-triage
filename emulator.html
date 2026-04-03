@@ -27,16 +27,16 @@
                             <!-- STATUS BUTTONS -->
                             <div id="buttons-div">
                                 <button type="button" onclick="status('URGENT')">
-                                    <img src="images/warning_icon.png">
                                     URGENT
+                                    <img src="images/warning_icon.png">
                                 </button>
                                 <button type="button" onclick="status('EVACUATED')">
-                                    <img src="images/exit_icon.png">
                                     EVACUATED
+                                    <img src="images/exit_icon.png">
                                 </button>
                                 <button type="button" onclick="status('SAFE')">
-                                    <img src="images/safe_icon.png">
                                     SAFE
+                                    <img src="images/safe_icon.png">
                                 </button>
                             </div>
                         </div>
@@ -48,9 +48,10 @@
                                 <table id="entry-table">
                                     <thead class="entry-head">
                                         <tr>
+                                            <th>Date</th>
                                             <th>Time</th>
                                             <th>Status</th>
-                                            <th>User</th>
+                                            <th>House ID</th>
                                         </tr>
                                     </thead>
                                     <tbody id="entry-body">
@@ -138,8 +139,8 @@
             </div>
 
         <!-- SCRIPTS -->
-        <script src="./scripts/send-log.js"></script>
         <script src="./scripts/receive-log.js"></script>
+        <script src="./scripts/send-log.js"></script>
 
     </body>
 </html>

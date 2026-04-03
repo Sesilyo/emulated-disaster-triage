@@ -34,4 +34,6 @@ function buildUpdateLogTable() {
     });
 }
 
+// STATUS COUNTER
+
 buildUpdateLogTable();
