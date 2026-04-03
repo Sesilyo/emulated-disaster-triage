@@ -159,6 +159,12 @@
     border-collapse: collapse;
 }
 
+#entry-table th,
+#entry-table td {
+    text-align: left;   
+    border-bottom: 1px solid #ccc;
+}
+
 /* ======== RECEIVER PANEL ======== */
 #receiver-panel {
     display: flex;
